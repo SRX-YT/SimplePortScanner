@@ -1,30 +1,32 @@
+# -*- coding: utf-8 -*-
+
 import socket
 
 def fanc1():
-    color_a = ("[+]")
+    a = ("[+]")
     print("~"*50)
-    host = input(color_a + "Host --> ")
-    port = int(input(color_a + "Port --> "))
+    host = input(a + "Host --> ")
+    port = int(input(a + "Port --> "))
     print("~"*50)
 
     scan = socket.socket()
 
-    color_b = ("[!]")
-    color_c = ("[!]")
+    b = ("[!]")
+    c = ("[!]")
 
     try:
         scan.connect((host,port))
     except scan.error:
-        print(color_b + "Port -- ", port, " -- [CLOSED]")
+        print(b + "Port -- ", port, " -- [CLOSED]")
     else:
-        print(color_c + "Port -- ", port, " -- [OPEN]")
+        print(c + "Port -- ", port, " -- [OPEN]")
 
 def fanc2():
-    color_a = ("[+]")
-    color_b = ("[!]")
-    color_c = ("[!]")
+    a = ("[+]")
+    b = ("[!]")
+    c = ("[!]")
 
-    host = input(color_a + " Host --> ")
+    host = input(a + " Host --> ")
     print("\n")
     port = [21,22,80,443]
 
@@ -34,16 +36,17 @@ def fanc2():
             scan.settimeout(0.5)
             scan.connect((host, i))
         except socket.error:
-            print(color_b + "Port -- ", i, " -- [CLOSED]")
+            print(b + "Port -- ", i, " -- [CLOSED]")
         else:
-            print(color_c + "Port -- ", i, " -- [OPEN]")
+            print(c + "Port -- ", i, " -- [OPEN]")
 
-print("~"*50)
+print("~"*50, "\n")
 
-print("\t[1] --- Сканировать конкретный порт")
-print("\t[2] --- Сканировать список")
+print("\t[1] --- РЎРєР°РЅРёСЂРѕРІР°С‚СЊ РµРґРёРЅРёС‡РЅС‹Р№ РїРѕСЂС‚")
+print("\t[2] --- РЎРєР°РЅРёСЂРѕРІР°С‚СЊ СЃРїРёСЃРѕРє РїРѕРїСѓР»СЏСЂРЅС‹С… РїРѕСЂС‚РѕРІ")
 
-print(("~"*50), "\n")
+print("~"*50, "\n")
+
 text_a = input("[scan] --> ")
 
 if text_a == "1":
@@ -51,4 +54,4 @@ if text_a == "1":
 elif text_a == "2":
     fanc2()
 else:
-    print("Параметр введён не правильно!")
+    print("РћС€РёР±РєР°, РЅРµРІРµСЂРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ!")
