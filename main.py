@@ -28,7 +28,7 @@ def fanc2():
 
     host = input(a + " Host --> ")
     print("\n")
-    port = [21,22,80,443]
+    port = [21,22,80,443,1337]
 
     for i in port:
         try:
