@@ -4,10 +4,10 @@ import socket
 
 def fanc1():
     a = ("[+]")
-    print("~"*50)
+    print("~"*55)
     host = input(a + "Host --> ")
     port = int(input(a + "Port --> "))
-    print("~"*50)
+    print("~"*55)
 
     scan = socket.socket()
 
